@@ -375,9 +375,9 @@ header {
   position: relative;
   z-index: 1;
   min-height: 94vh;
-  max-width: 1680px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 134px clamp(28px, 4.4vw, 82px) 86px;
+  padding: 138px clamp(22px, 5vw, 64px) 86px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,13 +386,10 @@ header {
 
 .hero-copy-block {
   width: 100%;
-  max-width: 1420px;
-  margin: 0 auto;
+  max-width: 1180px;
 }
 
 .eyebrow {
-  max-width: 1120px;
-  margin-inline: auto;
   font-size: 11px;
   letter-spacing: 0.24em;
   color: rgba(45, 48, 51, 0.42);
@@ -403,7 +400,6 @@ header {
   width: max-content;
   max-width: 100%;
   margin-top: 34px;
-  margin-inline: auto;
   transition: opacity 520ms var(--ease), filter 520ms var(--ease), transform 520ms var(--ease);
 }
 
@@ -418,10 +414,10 @@ header {
   display: inline-flex;
   align-items: baseline;
   font-family: var(--font-serif);
-  font-size: clamp(5.2rem, 12.5vw, 12.6rem);
+  font-size: clamp(5rem, 13.6vw, 11.8rem);
   line-height: 0.78;
   color: rgba(45, 48, 51, 0.92);
-  letter-spacing: 0.005em;
+  letter-spacing: 0.02em;
 }
 
 .dream-letters span {
@@ -433,11 +429,11 @@ header {
 }
 
 .after-absence {
-  margin-left: calc(0.006em + var(--missing-space, 0) * 0.035em);
+  margin-left: calc(0.02em + var(--missing-space, 0) * 0.08em);
 }
 
 .dream-word:hover .after-absence {
-  margin-left: 0.045em;
+  margin-left: 0.13em;
 }
 
 .absence-slot {
@@ -449,9 +445,9 @@ header {
   --tilt-y: 0deg;
   position: relative;
   display: inline-block;
-  width: calc(0.17em + var(--missing-space, 0) * 0.08em);
-  height: 0.68em;
-  margin-inline: 0.006em;
+  width: calc(0.19em + var(--missing-space, 0) * 0.2em);
+  height: 0.7em;
+  margin-inline: 0.025em;
   cursor: crosshair;
   transform: translateY(0.02em);
   border-radius: 999px;
@@ -510,7 +506,7 @@ header {
 
 .dream-word:hover .absence-slot,
 .absence-slot:hover {
-  width: 0.28em;
+  width: 0.54em;
   filter:
     drop-shadow(0 20px 36px rgba(174, 161, 148, 0.16))
     drop-shadow(0 0 24px rgba(245, 151, 181, 0.18))
@@ -545,7 +541,7 @@ header {
 .limb-cross {
   left: 50%;
   top: 50%;
-  width: 30%;
+  width: 20%;
   height: 92%;
   opacity: 0;
   border-radius: 999px;
@@ -581,12 +577,12 @@ header {
 .dream-word:hover .limb-left,
 .absence-slot:hover .limb-left {
   opacity: 0.98;
-  width: 28%;
+  width: 16%;
   height: 96%;
   border-radius: 22px 22px 18px 18px;
   transform:
     translate(calc(-50% + var(--bend-x) * 0.1), calc(-50% + var(--bend-y) * 0.08))
-    rotate(12deg)
+    rotate(14deg)
     skewY(-2deg);
   animation: liquid-limb-left 1800ms var(--ease) infinite alternate;
 }
@@ -594,12 +590,12 @@ header {
 .dream-word:hover .limb-right,
 .absence-slot:hover .limb-right {
   opacity: 0.96;
-  width: 28%;
+  width: 16%;
   height: 98%;
   border-radius: 22px 22px 18px 18px;
   transform:
     translate(calc(-50% + var(--bend-x) * -0.08), calc(-50% + var(--bend-y) * 0.08))
-    rotate(-12deg)
+    rotate(-14deg)
     skewY(2deg);
   animation: liquid-limb-right 1800ms var(--ease) infinite alternate;
 }
@@ -607,11 +603,11 @@ header {
 .dream-word:hover .limb-cross,
 .absence-slot:hover .limb-cross {
   opacity: 0.92;
-  width: 74%;
+  width: 54%;
   height: 8%;
   border-radius: 999px;
   transform:
-    translate(calc(-50% + var(--bend-x) * -0.06), calc(-8% + var(--bend-y) * 0.06))
+    translate(calc(-50% + var(--bend-x) * -0.06), calc(-11% + var(--bend-y) * 0.06))
     rotate(-4deg);
   animation: liquid-limb-cross 1700ms var(--ease) infinite alternate;
 }
@@ -656,7 +652,6 @@ header {
 
 .hero-poem {
   margin-top: 40px;
-  margin-inline: auto;
   max-width: 680px;
   font-family: var(--font-serif);
   color: #5f5c58;
@@ -678,7 +673,6 @@ header {
 
 .archive-door {
   margin-top: 44px;
-  margin-left: calc((100% - min(1120px, 100%)) / 2);
   display: inline-flex;
   align-items: center;
   gap: 18px;
