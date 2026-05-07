@@ -37,11 +37,12 @@ export function DreamHero() {
               onPointerEnter={() => setNear(1)}
               style={{ animationDelay: "600ms" }}
             >
-              <i className="broken-a left" />
-              <i className="broken-a right" />
-              <i className="broken-a cross" />
-              <i className="broken-a dust dust-one" />
-              <i className="broken-a dust dust-two" />
+              <i className="morph-a limb-left" />
+              <i className="morph-a limb-right" />
+              <i className="morph-a limb-cross" />
+              <i className="morph-a crack-a crack-one" />
+              <i className="morph-a crack-a crack-two" />
+              <i className="morph-a crack-a crack-three" />
             </span>
             <span className="after-absence" style={{ animationDelay: "720ms" }}>
               N
@@ -56,7 +57,7 @@ export function DreamHero() {
           ))}
         </div>
 
-        <a className="archive-door" href="#archive">
+        <a className="archive-door liquid-glass liquid-hover" href="#archive">
           {text.enterArchive}
         </a>
       </div>

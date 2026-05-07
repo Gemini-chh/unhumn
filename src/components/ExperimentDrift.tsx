@@ -20,7 +20,7 @@ export function ExperimentDrift() {
 
       <div className="drift-field">
         {text.experiments.items.map((item, index) => (
-          <div className="drift-cell" key={item} style={{ "--delay": index } as CSSProperties}>
+          <div className="drift-cell liquid-glass liquid-hover" key={item} style={{ "--delay": index } as CSSProperties}>
             <span>{String(index + 1).padStart(2, "0")}</span>
             <strong>{item}</strong>
           </div>

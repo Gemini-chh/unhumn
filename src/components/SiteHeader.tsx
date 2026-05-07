@@ -9,11 +9,11 @@ export function SiteHeader() {
   return (
     <header>
       <nav className="top-nav">
-        <a className="brand" href="#home">
+        <a className="brand liquid-glass liquid-edge" href="#home">
           UNHUMN
         </a>
 
-        <div className={`nav-links ${isSwitching ? "is-switching" : ""}`}>
+        <div className={`nav-links liquid-glass liquid-edge ${isSwitching ? "is-switching" : ""}`}>
           {text.nav.map((item, index) => (
             <a href={navTargets[index]} key={item}>
               {item}
@@ -21,15 +21,10 @@ export function SiteHeader() {
           ))}
         </div>
 
-        <div className="language-toggle" aria-label="Language switcher">
+        <div className="language-toggle liquid-glass liquid-edge" aria-label="Language switcher">
           <span className={isSwitching ? "is-visible" : ""}>{text.reconstructing}</span>
           {(["cn", "en"] as Language[]).map((item) => (
-            <button
-              className={language === item ? "active" : ""}
-              key={item}
-              onClick={() => setLanguage(item)}
-              type="button"
-            >
+            <button className={language === item ? "active" : ""} key={item} onClick={() => setLanguage(item)} type="button">
               {item === "cn" ? "中文" : "EN"}
             </button>
           ))}

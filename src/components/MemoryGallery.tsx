@@ -19,7 +19,7 @@ export function MemoryGallery() {
 
       <div className="memory-river">
         {text.archive.items.map((item, index) => (
-          <article className="memory-piece" key={item.title}>
+          <article className="memory-piece liquid-glass liquid-hover" key={item.title}>
             <div className="memory-surface" data-tone={index} />
             <span>{item.year}</span>
             <h3>{item.title}</h3>
