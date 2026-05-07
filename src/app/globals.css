@@ -375,9 +375,9 @@ header {
   position: relative;
   z-index: 1;
   min-height: 94vh;
-  max-width: 1320px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 138px clamp(22px, 5vw, 64px) 86px;
+  padding: 138px clamp(22px, 3.6vw, 56px) 86px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,7 +386,7 @@ header {
 
 .hero-copy-block {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1380px;
 }
 
 .eyebrow {
@@ -429,11 +429,11 @@ header {
 }
 
 .after-absence {
-  margin-left: calc(0.02em + var(--missing-space, 0) * 0.08em);
+  margin-left: calc(0.006em + var(--missing-space, 0) * 0.03em);
 }
 
 .dream-word:hover .after-absence {
-  margin-left: 0.13em;
+  margin-left: 0.045em;
 }
 
 .absence-slot {
@@ -445,9 +445,9 @@ header {
   --tilt-y: 0deg;
   position: relative;
   display: inline-block;
-  width: calc(0.19em + var(--missing-space, 0) * 0.2em);
+  width: calc(0.16em + var(--missing-space, 0) * 0.06em);
   height: 0.7em;
-  margin-inline: 0.025em;
+  margin-inline: 0.004em;
   cursor: crosshair;
   transform: translateY(0.02em);
   border-radius: 999px;
@@ -506,7 +506,7 @@ header {
 
 .dream-word:hover .absence-slot,
 .absence-slot:hover {
-  width: 0.54em;
+  width: 0.28em;
   filter:
     drop-shadow(0 20px 36px rgba(174, 161, 148, 0.16))
     drop-shadow(0 0 24px rgba(245, 151, 181, 0.18))
