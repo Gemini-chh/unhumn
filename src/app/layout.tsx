@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "UNHUMN | AI Portfolio",
+  title: "UNHUMN | A Soft Digital Archive",
   description:
-    "A personal AI lab for learning notes, prompt experiments, visual creation, and projects.",
+    "A quiet, breathing personal art archive about incompletion, repair, memory, and rebuilding the self.",
 };
 
 export default function RootLayout({
