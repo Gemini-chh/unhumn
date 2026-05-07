@@ -285,14 +285,14 @@ header {
 }
 
 .top-nav {
-  max-width: 1240px;
+  max-width: none;
   margin: 14px auto 0;
-  padding: 0 clamp(18px, 2vw, 28px);
+  padding: 0;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: clamp(18px, 3vw, 34px);
-  width: min(100% - 48px, 1240px);
+  gap: clamp(18px, 3vw, 40px);
+  width: calc(100% - clamp(56px, 7vw, 128px));
 }
 
 .brand,
