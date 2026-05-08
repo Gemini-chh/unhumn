@@ -37,6 +37,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   color: var(--foreground);
   background:
     radial-gradient(circle at 12% 12%, rgba(245, 221, 227, 0.76), transparent 28%),
@@ -66,19 +67,19 @@ a {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.64);
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.18) 46%, rgba(221, 232, 240, 0.28)),
-    radial-gradient(220px circle at var(--local-x) var(--local-y), rgba(255, 255, 255, 0.62), rgba(255, 242, 216, 0.2) 38%, transparent 66%),
-    var(--glass-fill);
-  backdrop-filter: blur(24px) saturate(1.35) contrast(1.04);
-  -webkit-backdrop-filter: blur(24px) saturate(1.35) contrast(1.04);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.16) 48%, rgba(221, 232, 240, 0.24)),
+    radial-gradient(240px circle at var(--local-x) var(--local-y), rgba(255, 255, 255, 0.66), rgba(255, 242, 216, 0.18) 38%, transparent 68%),
+    rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(22px) saturate(1.42) contrast(1.04);
+  -webkit-backdrop-filter: blur(22px) saturate(1.42) contrast(1.04);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.92),
-    inset 0 -22px 42px rgba(255, 255, 255, 0.22),
+    inset 0 -20px 40px rgba(255, 255, 255, 0.2),
     inset 18px 18px 42px rgba(255, 255, 255, 0.16),
     inset -18px -18px 50px rgba(120, 116, 111, 0.055),
-    0 24px 88px var(--glass-shadow);
+    0 22px 76px rgba(174, 161, 148, 0.18);
   transform: translateZ(0);
   transition:
     transform 920ms var(--ease),
@@ -117,8 +118,8 @@ a {
   inset: 0;
   background:
     linear-gradient(115deg, rgba(255, 255, 255, 0.84), transparent 18%, transparent 72%, rgba(255, 255, 255, 0.52)),
-    repeating-linear-gradient(98deg, transparent 0 18px, rgba(255, 255, 255, 0.16) 19px, transparent 21px);
-  opacity: 0.28;
+    repeating-linear-gradient(98deg, transparent 0 22px, rgba(255, 255, 255, 0.12) 23px, transparent 25px);
+  opacity: 0.22;
   mix-blend-mode: screen;
   transform: translate3d(calc(var(--bend-x) * 0.2), calc(var(--bend-y) * 0.2), 0) skew(var(--tilt-y), var(--tilt-x));
   clip-path: polygon(0 0, 100% 0, calc(100% - max(0px, var(--bend-x))) 100%, max(0px, calc(var(--bend-x) * -1)) 100%);
@@ -146,7 +147,7 @@ a {
 
 .liquid-hover:hover {
   border-color: rgba(255, 255, 255, 0.88);
-  filter: saturate(1.08) contrast(1.02);
+  filter: saturate(1.1) contrast(1.02);
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.24) 48%, rgba(245, 221, 227, 0.3)),
     radial-gradient(260px circle at var(--local-x) var(--local-y), rgba(255, 242, 216, 0.74), rgba(255, 255, 255, 0.28) 36%, transparent 68%),
@@ -156,7 +157,7 @@ a {
     inset 0 -28px 56px rgba(255, 255, 255, 0.26),
     inset 26px 18px 54px rgba(255, 255, 255, 0.22),
     inset -22px -18px 56px rgba(120, 116, 111, 0.075),
-    0 34px 118px rgba(174, 161, 148, 0.28);
+    0 28px 98px rgba(174, 161, 148, 0.24);
 }
 
 .liquid-hover:active,
@@ -292,7 +293,7 @@ header {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: clamp(18px, 3vw, 40px);
-  width: calc(100% - clamp(56px, 7vw, 128px));
+  width: calc(100% - clamp(40px, 6vw, 112px));
 }
 
 .brand,
@@ -417,7 +418,7 @@ header {
   font-size: clamp(5rem, 13.6vw, 11.8rem);
   line-height: 0.78;
   color: rgba(45, 48, 51, 0.92);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.012em;
 }
 
 .dream-letters span {
@@ -495,7 +496,7 @@ header {
   opacity: 0;
   border-radius: 999px;
   background:
-    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), rgba(129, 185, 218, 0.75), rgba(245, 151, 181, 0.72), transparent);
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), rgba(95, 185, 226, 0.72), rgba(255, 132, 174, 0.74), transparent);
   transform: translate(-50%, -50%) scaleX(0.2);
   transition:
     opacity 740ms var(--ease),
@@ -525,7 +526,7 @@ header {
 
 .dream-word:hover .absence-slot::after,
 .absence-slot:hover::after {
-  opacity: 1;
+  opacity: 0.82;
   filter: blur(0) saturate(1.18);
   transform: translate(-50%, -50%) scaleX(1);
 }
@@ -625,7 +626,7 @@ header {
 
 .dream-word:hover .crack-a,
 .absence-slot:hover .crack-a {
-  opacity: 0.88;
+  opacity: 0.74;
 }
 
 .dream-word:hover .crack-one,
@@ -1004,7 +1005,7 @@ header {
 @media (max-width: 759px) {
   .top-nav {
     grid-template-columns: auto auto;
-    width: calc(100% - 24px);
+    width: calc(100% - 20px);
     padding-inline: 0;
     gap: 12px;
   }
@@ -1014,7 +1015,79 @@ header {
   }
 
   .dream-hero {
-    padding-top: 120px;
+    min-height: 88vh;
+    padding: 116px 18px 64px;
+    align-items: stretch;
+  }
+
+  .hero-copy-block {
+    max-width: none;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+  }
+
+  .dream-word {
+    margin-top: 28px;
+    width: 100%;
+  }
+
+  .dream-letters {
+    font-size: clamp(3.25rem, 18.5vw, 5.25rem);
+    letter-spacing: 0;
+    max-width: 100%;
+  }
+
+  .absence-slot {
+    width: calc(0.13em + var(--missing-space, 0) * 0.03em);
+    height: 0.64em;
+    margin-inline: 0;
+  }
+
+  .dream-word:hover .absence-slot,
+  .absence-slot:hover {
+    width: 0.17em;
+  }
+
+  .after-absence {
+    margin-left: 0.004em;
+  }
+
+  .dream-word:hover .after-absence {
+    margin-left: 0.012em;
+  }
+
+  .limb-left,
+  .limb-right {
+    width: 24%;
+  }
+
+  .dream-word:hover .limb-left,
+  .absence-slot:hover .limb-left,
+  .dream-word:hover .limb-right,
+  .absence-slot:hover .limb-right {
+    width: 24%;
+  }
+
+  .dream-word:hover .limb-cross,
+  .absence-slot:hover .limb-cross {
+    width: 62%;
+  }
+
+  .hero-poem {
+    margin-top: 28px;
+    max-width: 100%;
+    font-size: clamp(1.35rem, 8vw, 2.05rem);
+    line-height: 1.18;
+  }
+
+  .archive-door {
+    width: min(100%, 280px);
+    justify-content: center;
+    margin-top: 34px;
+    padding: 14px 18px;
   }
 
   .brand {
@@ -1031,6 +1104,54 @@ header {
     width: 100%;
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .memory-section,
+  .experiment-section,
+  .missing-section,
+  .signal-footer {
+    padding: 78px 18px;
+  }
+
+  .section-intro {
+    gap: 20px;
+  }
+
+  .section-intro h2,
+  .missing-section h2 {
+    font-size: clamp(2.75rem, 14vw, 4.8rem);
+  }
+
+  .section-intro div,
+  .soft-prose {
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .memory-river {
+    margin-top: 48px;
+    gap: 16px;
+  }
+
+  .memory-piece {
+    min-height: 310px;
+    border-radius: 28px;
+    padding: 24px;
+  }
+
+  .memory-surface {
+    inset: 12px;
+    border-radius: 24px;
+  }
+
+  .drift-field {
+    grid-template-columns: 1fr;
+    margin-top: 46px;
+  }
+
+  .drift-cell {
+    min-height: 128px;
+    padding: 24px;
   }
 
   .signal-card {
